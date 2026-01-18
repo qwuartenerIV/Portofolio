@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Pastel Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Halo.</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Kreativitas dalam <span class="highlight">Kesederhanaan</span></h1>
+            <p>Saya seorang desainer & pengembang web yang menyukai estetika bersih.</p>
+            <button class="btn-primary" onclick="scrollToProject()">Lihat Karya</button>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Karya Terbaru</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="card-img" style="background-color: #FFDFD3;"></div>
+                <h3>Desain UI/UX</h3>
+            </div>
+            <div class="project-card">
+                <div class="card-img" style="background-color: #E0BBE4;"></div>
+                <h3>Web Development</h3>
+            </div>
+            <div class="project-card">
+                <div class="card-img" style="background-color: #D2E7D6;"></div>
+                <h3>Branding</h3>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

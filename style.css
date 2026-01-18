@@ -1,0 +1,123 @@
+:root {
+    --bg-color: #F9F9F9;
+    --text-color: #4A4A4A;
+    --pastel-peach: #FFDFD3;
+    --pastel-purple: #E0BBE4;
+    --pastel-blue: #D4F1F4;
+    --accent: #957DAD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
+}
+
+nav .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 10%;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    background: linear-gradient(120deg, var(--pastel-peach) 0%, var(--pastel-purple) 100%);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    margin-top: 2rem;
+    padding: 12px 30px;
+    border: none;
+    background-color: var(--accent);
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* Projects */
+.projects {
+    padding: 5rem 10%;
+    background: white;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.project-card {
+    background: var(--bg-color);
+    padding: 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    height: 150px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
