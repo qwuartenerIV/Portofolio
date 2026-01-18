@@ -1,0 +1,28 @@
+:root {
+    --bg-color: #F9F9F9;
+    --text-color: #4A4A4A;
+    --pastel-peach: #FFDFD3;
+    --pastel-purple: #E0BBE4;
+    --pastel-blue: #D4F1F4;
+    --accent: #957DAD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+}
+
+nav {
+    display: flex;
+}
+nav.logo {
+    
+}
