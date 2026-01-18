@@ -20,9 +20,31 @@ body {
     scroll-behavior: smooth;
 }
 
+/*/ navigation /*/
 nav {
     display: flex;
+    justify-content: space-between;
+    padding: 2rem 10%;
+    align-items: center;
 }
-nav.logo {
-    
+nav .logo {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav ul li {
+    margin-left: 2rem;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 400;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    color: var(--accent);
 }
