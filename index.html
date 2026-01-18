@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Pastel Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio | Nama Kamu</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">Halo.</div>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#projects">Projek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+<header>
+  <nav>
+    <strong>Portofolio</strong>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Kreativitas dalam <span class="highlight">Kesederhanaan</span></h1>
-            <p>Saya seorang desainer & pengembang web yang menyukai estetika bersih.</p>
-            <button class="btn-primary" onclick="scrollToProject()">Lihat Karya</button>
-        </div>
-    </section>
+<section id="home" class="hero">
+  <div>
+    <h1>Halo, Saya <span class="accent">Nama Kamu</span></h1>
+    <p>Web Developer yang fokus pada desain modern dan minimalis.</p>
+    <a href="#projects" class="btn">Lihat Proyek</a>
+  </div>
+  <div>
+    <img src="https://via.placeholder.com/400" alt="Profile">
+  </div>
+</section>
 
-    <section id="projects" class="projects">
-        <h2>Karya Terbaru</h2>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="card-img" style="background-color: #FFDFD3;"></div>
-                <h3>Desain UI/UX</h3>
-            </div>
-            <div class="project-card">
-                <div class="card-img" style="background-color: #E0BBE4;"></div>
-                <h3>Web Development</h3>
-            </div>
-            <div class="project-card">
-                <div class="card-img" style="background-color: #D2E7D6;"></div>
-                <h3>Branding</h3>
-            </div>
-        </div>
-    </section>
+<section id="about">
+  <h2>Tentang Saya</h2>
+  <p>Saya adalah developer yang menyukai UI/UX sederhana, clean, dan responsif.</p>
+</section>
 
-    <script src="script.js"></script>
+<section id="projects">
+  <h2>Proyek</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>Project One</h3>
+      <p>Website company profile modern.</p>
+    </div>
+    <div class="card">
+      <h3>Project Two</h3>
+      <p>Aplikasi web interaktif.</p>
+    </div>
+    <div class="card">
+      <h3>Project Three</h3>
+      <p>Landing page minimalis.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Kontak</h2>
+  <p>Email: nama@email.com</p>
+</section>
+
+<footer>
+  <p>© 2026 Nama Kamu</p>
+</footer>
+
+<!-- JS -->
+<script src="script.js"></script>
 </body>
 </html>
