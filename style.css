@@ -1,9 +1,9 @@
 :root {
-    --accent: red;
-    --primary: red;
-    --secondary: red;
-    --bg-color: red;
-    --text-color: red;
+    --accent: #EBF4DD;
+    --primary: #90AB8B;
+    --secondary: #5A7863;
+    --bg-color: #FCFFF7;
+    --text-color: #3B4953;
 }
 
 * {
@@ -11,4 +11,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: monospace, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-behavior: smooth;
+}
+
+/*Navigation*/
+nav {
+  
 }
