@@ -1,2 +1,2 @@
 # Portofolio✨
-Ini adalah portofolio saya
+Ini adalah portofolio saya.
