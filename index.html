@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portofolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header></header>
-  <main></main>
-  <footer></footer>
+
+    <!-- Navbar -->
+    <nav>
+        <h1 class="logo">Portofolio</h1>
+        <ul>
+            <li><a href="#about">Tentang</a></li>
+            <li><a href="#projects">Proyek</a></li>
+            <li><a href="#contact">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <h2>Halo, Saya <span>Nama Kamu</span></h2>
+        <p>Web Developer | UI Designer | Freelancer</p>
+        <button onclick="showAlert()">Hubungi Saya</button>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+        <h2>Tentang Saya</h2>
+        <p>
+            Saya adalah seorang web developer yang fokus pada pembuatan website
+            modern dan responsif menggunakan HTML, CSS, dan JavaScript.
+        </p>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2>Proyek</h2>
+        <div class="project-list">
+            <div class="card">Website Company Profile</div>
+            <div class="card">Aplikasi To-Do List</div>
+            <div class="card">Landing Page Produk</div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+        <h2>Kontak</h2>
+        <p>Email: nama@email.com</p>
+        <p>Instagram: @username</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Nama Kamu</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
