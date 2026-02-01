@@ -32,6 +32,79 @@ body {
     color: #1a1a1a;
 }
 
+/* Shapes */
+.shape {
+    position: absolute;
+    pointer-events: none;
+}
+
+.shape-circle {
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(52, 152, 219, 0.15) 0%, transparent 70%);
+}
+
+.shape-line {
+    background: linear-gradient(90deg, transparent 0%, rgba(52, 152, 219, 0.2) 50%, transparent 100%);
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes slideIn {
+    0% { transform: translateX(-100px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    left: 5%;
+    animation: float 6s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: 15%;
+    right: 8%;
+    animation: float 8s ease-in-out infinite 1s;
+}
+
+.shape-3 {
+    width: 200px;
+    height: 2px;
+    top: 50%;
+    right: 10%;
+    animation: slideIn 1s ease-out;
+}
+
+.shape-4 {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    right: 10%;
+    animation: float 7s ease-in-out infinite;
+}
+
+.shape-5 {
+    width: 180px;
+    height: 180px;
+    bottom: 10%;
+    left: 5%;
+    animation: float 6.5s ease-in-out infinite 0.5s;
+}
+
+.shape-6 {
+    width: 250px;
+    height: 2px;
+    left: 0;
+    top: 30%;
+    animation: slideIn 1s ease-out 0.3s backwards;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -120,18 +193,24 @@ nav .brand {
 .section {
     padding: 80px 40px;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
 .section h2 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #1a1a1a;
+    position: relative;
+    z-index: 2;
 }
 
 .section p {
     font-size: 16px;
     color: #666;
     line-height: 1.6;
+    position: relative;
+    z-index: 2;
 }
 
 .work-list {
@@ -139,6 +218,8 @@ nav .brand {
     flex-direction: column;
     gap: 15px;
     margin-top: 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .work-item {
@@ -149,6 +230,24 @@ nav .brand {
     border-radius: 12px;
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.item-accent {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover .item-accent {
+    transform: scaleY(1);
 }
 
 .work-item:hover {
@@ -163,11 +262,15 @@ nav .brand {
     font-size: 20px;
     margin-bottom: 8px;
     color: #1a1a1a;
+    position: relative;
+    z-index: 1;
 }
 
 .work-item span {
     font-size: 13px;
     color: #999;
+    position: relative;
+    z-index: 1;
 }
 
 footer {
@@ -180,18 +283,17 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .shape-1, .shape-2, .shape-4, .shape-5 {
+        width: 100px;
+        height: 100px;
+    }
+
     .nav-links {
         gap: 15px;
     }
 
     .hero h1 {
         font-size: 32px;
-    }
-
-    .hero::before,
-    .hero::after {
-        width: 250px;
-        height: 250px;
     }
 
     .section h2 {
