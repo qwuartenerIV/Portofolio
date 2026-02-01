@@ -60,3 +60,31 @@ sections.forEach(section => {
     section.style.transition = "0.8s ease";
     observer.observe(section);
 });
+
+// Dark Mode Toggle
+const themeToggle = document.getElementById('themeToggle');
+const htmlElement = document.documentElement;
+
+// Cek preferensi user atau system preference
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+const savedTheme = localStorage.getItem('theme');
+
+if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    htmlElement.classList.add('dark-mode');
+    themeToggle.textContent = '☀️';
+} else {
+    themeToggle.textContent = '🌙';
+}
+
+// Toggle theme saat button diklik
+themeToggle.addEventListener('click', () => {
+    htmlElement.classList.toggle('dark-mode');
+    
+    if (htmlElement.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        themeToggle.textContent = '☀️';
+    } else {
+        localStorage.setItem('theme', 'light');
+        themeToggle.textContent = '🌙';
+    }
+});
