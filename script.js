@@ -1,30 +1,20 @@
-const texts = ["Creative Developer", "UI/UX Enthusiast", "JavaScript Lover"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+// Smooth fade-in on scroll (Apple-style subtle animation)
+const sections = document.querySelectorAll(".section");
 
-(function type() {
-    if (count === texts.length) {
-        count = 0;
-    }
-
-    currentText = texts[count];
-    letter = currentText.slice(0, ++index);
-
-    document.querySelector(".typing").textContent = letter;
-
-    if (letter.length === currentText.length) {
-        count++;
-        index = 0;
-        setTimeout(type, 1500);
-    } else {
-        setTimeout(type, 100);
-    }
-})();
-
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
     });
-}
+}, {
+    threshold: 0.1
+});
+
+sections.forEach(section => {
+    section.style.opacity = 0;
+    section.style.transform = "translateY(40px)";
+    section.style.transition = "0.8s ease";
+    observer.observe(section);
+});
