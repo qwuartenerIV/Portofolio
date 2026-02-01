@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Saya</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Creative Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <nav>
-        <h1 class="logo">Portofolio</h1>
-        <ul>
-            <li><a href="#about">Tentang</a></li>
-            <li><a href="#projects">Proyek</a></li>
-            <li><a href="#contact">Kontak</a></li>
-        </ul>
-    </nav>
+    <div class="container">
 
-    <!-- Hero -->
-    <section class="hero">
-        <h2>Halo, Saya <span>Nama Kamu</span></h2>
-        <p>Web Developer | UI Designer | Freelancer</p>
-        <button onclick="showAlert()">Hubungi Saya</button>
-    </section>
+        <!-- Left Side -->
+        <div class="left">
+            <h1>Nama Kamu</h1>
+            <h2 class="typing"></h2>
+            <p>
+                Saya menciptakan pengalaman digital yang
+                modern, interaktif, dan berkesan.
+            </p>
+        </div>
 
-    <!-- About -->
+        <!-- Right Side -->
+        <div class="right">
+            <div class="card" onclick="scrollToSection('about')">About</div>
+            <div class="card" onclick="scrollToSection('projects')">Projects</div>
+            <div class="card" onclick="scrollToSection('contact')">Contact</div>
+        </div>
+
+    </div>
+
+    <!-- Sections -->
     <section id="about">
         <h2>Tentang Saya</h2>
         <p>
-            Saya adalah seorang web developer yang fokus pada pembuatan website
-            modern dan responsif menggunakan HTML, CSS, dan JavaScript.
+            Web Developer dengan fokus pada UI/UX,
+            animasi, dan interaksi modern berbasis JavaScript.
         </p>
     </section>
 
-    <!-- Projects -->
     <section id="projects">
         <h2>Proyek</h2>
-        <div class="project-list">
-            <div class="card">Website Company Profile</div>
-            <div class="card">Aplikasi To-Do List</div>
-            <div class="card">Landing Page Produk</div>
+        <div class="projects">
+            <div class="project">⚡ Interactive Landing Page</div>
+            <div class="project">🎧 Music Web App</div>
+            <div class="project">📊 Dashboard Admin</div>
         </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
         <h2>Kontak</h2>
         <p>Email: nama@email.com</p>
-        <p>Instagram: @username</p>
+        <p>Github: github.com/username</p>
     </section>
-
-    <footer>
-        <p>© 2026 Nama Kamu</p>
-    </footer>
 
     <script src="script.js"></script>
 </body>

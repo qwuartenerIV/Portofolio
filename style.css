@@ -2,152 +2,92 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    color: #2c3e50;
-    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    overflow-x: hidden;
 }
 
-/* Navbar */
-nav {
+.container {
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background: #2c3e50;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 100;
 }
 
-nav .logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
-
-nav ul li a {
-    color: #ecf0f1;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-nav ul li a:hover {
-    color: #3498db;
-    transform: translateY(-2px);
-}
-
-/* Hero */
-.hero {
-    height: 90vh;
-    background: linear-gradient(135deg, #34495e 0%, #2c3e50 50%, #34495e 100%);
+/* Left */
+.left {
+    flex: 1;
+    padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.left h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.left h2 {
+    font-size: 28px;
+    color: #00f5d4;
+    height: 40px;
+}
+
+.left p {
+    margin-top: 20px;
+    line-height: 1.6;
+    max-width: 400px;
+}
+
+/* Right */
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    color: white;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
+    gap: 30px;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: move 20s linear infinite;
-}
-
-@keyframes move {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
-}
-
-.hero span {
-    color: #3498db;
-    font-weight: bold;
-}
-
-.hero button {
-    margin-top: 30px;
-    padding: 12px 30px;
-    border: none;
-    background: #3498db;
-    color: #fff;
+.card {
+    width: 140px;
+    height: 140px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
-    border-radius: 50px;
-    font-weight: 600;
-    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-    transition: all 0.3s ease;
+    transition: 0.3s;
+    font-size: 18px;
 }
 
-.hero button:hover {
-    transform: translateY(-3px);
-    background: #2980b9;
-    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+.card:hover {
+    transform: translateY(-15px) scale(1.05);
+    background: rgba(0, 245, 212, 0.2);
 }
 
 /* Sections */
 section {
-    padding: 80px 40px;
-    text-align: center;
-    background: #fff;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 100px 80px;
 }
 
 section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    color: #2c3e50;
+    font-size: 40px;
+    margin-bottom: 20px;
 }
 
-#projects .project-list {
+.projects {
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 30px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.card {
-    background: #fff;
-    padding: 30px;
-    width: 250px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid #ecf0f1;
-}
-
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    border-color: #3498db;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: #ecf0f1;
-    text-align: center;
-    padding: 25px;
-    margin-top: 40px;
-    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
+.project {
+    background: rgba(255,255,255,0.1);
+    padding: 20px;
+    border-radius: 15px;
 }
